@@ -1,0 +1,341 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+    <!-- Add your site or application content here -->
+    <header class="site-header">
+        <div class="hero">
+            <div class="contenido-header contenedor">
+                <nav class="redes-sociales">
+                    <a href="#"><i class="iconbtn fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="iconbtn fab fa-twitter"></i></a>
+                    <a href="#"><i class="iconbtn fab fa-instagram"></i></a>
+                    <a href="#"><i class="iconbtn fab fa-linkedin-in"></i></a>
+                </nav>
+                <div class="info-event">
+                    <div class="datos">
+                        <p class="fecha"><i class="far fa-calendar-alt"></i>10/12/12</p>
+                        <p class="lugar"><i class="fas fa-map-marked-alt"></i>Ciudad Guatemala</p>
+                    </div>
+
+                    <h1 class="titulo-sitio">gooConference</h1>
+                    <p class="slogan">Las mejores conferencias en <span>Guatemala</span></p>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="nav-1">
+        <div class="contenido-nav contenedor">
+            <div class="logo">
+                <img src="img/logo.svg" alt="logo.l">
+            </div>
+            <div class="menu-mov">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav-primary">
+                <a class="btn btn-nav" href="#">Conferencias</a>
+                <a class="btn btn-nav" href="#">Calendarios</a>
+                <a class="btn btn-nav" href="#">Invitados</a>
+                <a class="btn btn-nav" href="#">Reservaciones</a>
+            </nav>
+        </div>
+    </div>
+
+
+    <section class="section contenedor">
+        <h2>REGISTRO DE USUARIOS</h2>
+        <form action="index.html" id="registro" class="registro" method="POST">
+            <div id="datos-usuario" class="registro caja clearfix">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                </div>
+                <div class="campo">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="apellido" placeholder="Apellido">
+                </div>
+                <div class="campo">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <div id="error"> Error</div>
+            </div>
+            <div id="paquetes" class="paquetes">
+                <h2>Elige el numero de boletos</h2>
+                <div class="contenedor">
+                    <ul class="list-precios">
+                        <li>
+                            <div class="tabla-precios">
+                                <h2>Pase por dia</h2>
+                                <p class="numero">Q180</p>
+                                <ul>
+                                    <li>Bocadillos Gratis</li>
+                                    <li>Acceso a las conferencias</li>
+                                    <li>Todos los talleres</li>
+                                </ul>
+                                <div class="orden">
+                                    <label for="pase_dia">Boletos deseados</label>
+                                    <input type="number" min="0" id="pase_dia" size="3" placeholder="0">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tabla-precios">
+                                <h2>Toda la semana</h2>
+                                <p class="numero">Q260</p>
+                                <ul>
+                                    <li>Bocadillos Gratis</li>
+                                    <li>Acceso a las conferencias</li>
+                                    <li>Todos los talleres</li>
+                                </ul>
+                                <div class="orden">
+                                    <label for="pase_semana">Boletos deseados</label>
+                                    <input type="number" min="0" id="pase_semana" size="3" placeholder="0">
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="tabla-precios">
+                                <h2>Pase 3 dias</h2>
+                                <p class="numero">Q220</p>
+                                <ul>
+                                    <li>Bocadillos Gratis</li>
+                                    <li>Acceso a las conferencias</li>
+                                    <li>Todos los talleres</li>
+                                </ul>
+                                <div class="orden">
+                                    <label for="pase_3d">Boletos deseados</label>
+                                    <input type="number" min="0" id="pase_2d" size="3" placeholder="0">
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div id="eventos" class="eventos clearfix">
+                <h3>Elige tus talleres</h3>
+                <div class="caja">
+                    <div id="viernes" class="contenido-dia clearfix">
+                        <h4>Viernes</h4>
+                        <div>
+                            <p>Talleres:</p>
+                            <label><input type="checkbox" name="registro[]" id="taller_01" value="taller_01"><time>10:00</time>
+                                Responsive Web Design</label>
+                            <label><input type="checkbox" name="registro[]" id="taller_02" value="taller_02"><time>12:00</time>
+                                Flexbox</label>
+                            <label><input type="checkbox" name="registro[]" id="taller_03" value="taller_03"><time>14:00</time>
+                                HTML5 y CSS3</label>
+                            <label><input type="checkbox" name="registro[]" id="taller_04" value="taller_04"><time>17:00</time>
+                                Drupal</label>
+                            <label><input type="checkbox" name="registro[]" id="taller_05" value="taller_05"><time>19:00</time>
+                                WordPress</label>
+                        </div>
+                        <div>
+                            <p>Conferencias:</p>
+                            <label><input type="checkbox" name="registro[]" id="conf_01" value="conf_01"><time>10:00</time> Como ser
+                                Freelancer</label>
+                            <label><input type="checkbox" name="registro[]" id="conf_02" value="conf_02"><time>17:00</time>
+                                Tecnologías del Futuro</label>
+                            <label><input type="checkbox" name="registro[]" id="conf_03" value="conf_03"><time>19:00</time>
+                                Seguridad en la Web</label>
+                        </div>
+                        <div>
+                            <p>Seminarios:</p>
+                            <label><input type="checkbox" name="registro[]" id="sem_01" value="sem_01"><time>10:00</time> Diseño UI
+                                y UX para móviles</label>
+                        </div>
+                    </div>
+                    <!--#viernes-->
+                    <div id="sabado" class="contenido-dia clearfix">
+                        <h4>Sábado</h4>
+                        <div>
+                            <p>Talleres:</p>
+                            <label><input type="checkbox" name="registro[]" id="taller_06" value="taller_06"><time>10:00</time>
+                                AngularJS</label>
+                            <label><input type="checkbox" name="registro[]" id="taller_07" value="taller_07"><time>12:00</time> PHP
+                                y MySQL</label>
+                            <label><input type="checkbox" name="registro[]" id="taller_08" value="taller_08"><time>14:00</time>
+                                JavaScript Avanzado</label>
+                            <label><input type="checkbox" name="registro[]" id="taller_09" value="taller_09"><time>17:00</time> SEO
+                                en Google</label>
+                            <label><input type="checkbox" name="registro[]" id="taller_10" value="taller_10"><time>19:00</time> De
+                                Photoshop a HTML5 y CSS3</label>
+                            <label><input type="checkbox" name="registro[]" id="taller_11" value="taller_11"><time>21:00</time> PHP
+                                Medio y Avanzado</label>
+                        </div>
+                        <div>
+                            <p>Conferencias:</p>
+                            <label><input type="checkbox" name="registro[]" id="conf_04" value="conf_04"><time>10:00</time> Como
+                                crear una tienda online que venda millones en pocos días</label>
+                            <label><input type="checkbox" name="registro[]" id="conf_05" value="conf_05"><time>17:00</time> Los
+                                mejores lugares para encontrar trabajo</label>
+                            <label><input type="checkbox" name="registro[]" id="conf_06" value="conf_06"><time>19:00</time> Pasos
+                                para crear un negocio rentable</label>
+                        </div>
+                        <div>
+                            <p>Seminarios:</p>
+                            <label><input type="checkbox" name="registro[]" id="sem_02" value="sem_02"><time>10:00</time> Aprende a
+                                Programar en una mañana</label>
+                            <label><input type="checkbox" name="registro[]" id="sem_03" value="sem_03"><time>17:00</time> Diseño UI
+                                y UX para móviles</label>
+                        </div>
+                    </div>
+                    <!--#sabado-->
+                    <div id="domingo" class="contenido-dia clearfix">
+                        <h4>Domingo</h4>
+                        <div>
+                            <p>Talleres:</p>
+                            <label><input type="checkbox" name="registro[]" id="taller_12" value="taller_12"><time>10:00</time>
+                                Laravel</label>
+                            <label><input type="checkbox" name="registro[]" id="taller_13" value="taller_13"><time>12:00</time> Crea
+                                tu propia API</label>
+                            <label><input type="checkbox" name="registro[]" id="taller_14" value="taller_14"><time>14:00</time>
+                                JavaScript y jQuery</label>
+                            <label><input type="checkbox" name="registro[]" id="taller_15" value="taller_15"><time>17:00</time>
+                                Creando Plantillas para WordPress</label>
+                            <label><input type="checkbox" name="registro[]" id="taller_16" value="taller_16"><time>19:00</time>
+                                Tiendas Virtuales en Magento</label>
+                        </div>
+                        <div>
+                            <p>Conferencias:</p>
+                            <label><input type="checkbox" name="registro[]" id="conf_07" value="conf_07"><time>10:00</time> Como
+                                hacer Marketing en línea</label>
+                            <label><input type="checkbox" name="registro[]" id="conf_08" value="conf_08"><time>17:00</time> ¿Con que
+                                lenguaje debo empezar?</label>
+                            <label><input type="checkbox" name="registro[]" id="conf_09" value="conf_09"><time>19:00</time>
+                                Frameworks y librerias Open Source</label>
+                        </div>
+                        <div>
+                            <p>Seminarios:</p>
+                            <label><input type="checkbox" name="registro[]" id="sem_04" value="sem_04"><time>14:00</time> Creando
+                                una App en Android en una tarde</label>
+                            <label><input type="checkbox" name="registro[]" id="sem_05" value="sem_05"><time>17:00</time> Creando
+                                una App en iOS en una tarde</label>
+                        </div>
+                    </div>
+                    <!--#domingo-->
+                </div>
+                <!--.caja-->
+            </div>
+            <!--#eventos-->
+            <div id="resumen" class="resumen clearfix">
+                <h2>PAGO & EXTRAS</h2>
+                <div class="caja clearfix">
+                    <div class="extras">
+                        <div class="orden">
+                            <label for="camisa_evento"> Camisa del evento $10</label>
+                            <input type="number" min="0" id="camisa_evento" placeholder="0">
+                        </div>
+                        <div class="orden">
+                            <label for="etiqueta_evento"> Etiquetas de evento $2</label>
+                            <input type="number" min="0" id="etiqueta_evento" placeholder="0">
+                        </div>
+                        <div class="orden">
+                            <label for="regalos"> Selecciona regalo</label>
+                            <select name="" id="regalo" required>
+                                <option value=""> Seleccione un regalo</option>
+                                <option value="ETI"> Etiquetas</option>
+                                <option value="PUL"> Pulseras</option>
+                                <option value="PLU"> Plumas</option>
+                            </select>
+                        </div>
+                        <!--Orden-->
+                        <input type="button" id="calcular" class="btn btn-registro" value="calcular">
+                        <!--Extras-->
+
+                    </div>
+                    <div class="total">
+                        <p>Resumen</p>
+                        <div id="lista-productos">
+
+                        </div>
+                        <p>Total: </p>
+                        <div id="suma-total">
+
+                        </div>
+                        <input id="btn-registro" class="btn btn-registro" type="submit" value="pagar">
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+    </section>
+
+
+    <footer class="site-footer">
+        <div class="contenedor grid">
+            <div class="footer-info">
+                <h2>SOBRE <span>NOSOTROS</span></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias possimus iusto voluptas impedit doloribus odit, eum, molestiae repellendus modi atque deleniti? Libero praesentium voluptas quae, accusantium repellendus quasi ut a!</p>
+            </div>
+            <div class="last-tweets">
+                <h2>ULTIMOS <span>TWEETS</span></h2>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum nemo totam nam quae </li>
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum nemo totam nam quae </li>
+                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum nemo totam nam quae </li>
+                </ul>
+            </div>
+            <div class="menu">
+                <h2>NUESTRAS <span>REDES SOCIALES</span></h2>
+                <nav class="redes-sociales">
+                    <a href="#"><i class="iconbtn fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="iconbtn fab fa-twitter"></i></a>
+                    <a href="#"><i class="iconbtn fab fa-instagram"></i></a>
+                    <a href="#"><i class="iconbtn fab fa-linkedin-in"></i></a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <!--JavaScript-->
+    <script src="js/vendor/modernizr-3.11.2.min.js "></script>
+    <script src="js/plugins.js "></script>
+    <script src="js/main.js "></script>
+
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga = function() {
+            ga.q.push(arguments)
+        };
+        ga.q = [];
+        ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('set', 'transport', 'beacon');
+        ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js " async></script>
+</body>
+
+</html>
