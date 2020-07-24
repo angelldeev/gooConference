@@ -942,12 +942,20 @@ li {
     text-align: center;
     text-transform: uppercase;
     margin: 20px 0 0;
+    font-size: 2.4rem;
 }
 
 .registro label {
+    margin-right: 1rem;
+    align-self: center;
     margin-bottom: 5px;
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 2rem;
+}
+
+.registro input {
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
 }
 
 h4 {

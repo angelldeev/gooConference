@@ -6,6 +6,15 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         //console.log('Listo')
+        var map = L.map('map').setView([14.624448, -90.50271], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([14.624448, -90.50271]).addTo(map)
+    .bindPopup('gooConference.<br> ven por tus reservaciones.')
+    .openPopup();
 
         // Campos datos
 
@@ -37,14 +46,34 @@
         pase_2d.addEventListener('blur', mostrarOP);
         pase_semana.addEventListener('blur', mostrarOP);
 
-        nombre.addEventListener('blur', function() {
+        nombre.addEventListener('blur', validarCampos);
+        apellido.addEventListener('blur', validarCampos);
+        email.addEventListener('blur', validarCampos);
+        email.addEventListener('blur', validarCorreo);
+
+        function validarCorreo(event) {
+            if (this.value.indexOf("@") < -1) {
+                errorDiv.style.display = `none`;
+                this.style.border = `none`;
+            } else {
+                errorDiv.style.display = 'block';
+                errorDiv.innerHTML = `Este correo no es valido`;
+                this.style.border = '1px solid red';
+                errorDiv.style.border = `1px solid red`;
+            }
+        }
+
+        function validarCampos(event) {
             if (this.value == '') {
                 errorDiv.style.display = 'block';
                 errorDiv.innerHTML = `Este campo es obligatorio`;
                 this.style.border = '1px solid red';
-
+                errorDiv.style.border = `1px solid red`;
+            } else {
+                errorDiv.style.display = `none`;
+                this.style.border = `none`;
             }
-        })
+        }
 
         function calcularTotal(event) {
             event.preventDefault();
