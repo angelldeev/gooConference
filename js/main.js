@@ -147,3 +147,67 @@ L.marker([14.624448, -90.50271]).addTo(map)
 
     }); // DOM CONTENT LOADED
 })();
+
+
+
+
+
+$(function() {
+
+    // programa de conferencias
+    $(`div.ocultar`).hide();
+    $(`.programa-evento .info-taller:first`).show();
+
+    $(`.menu-program a:first`).addClass(`activo`);
+
+    $(`.menu-program a`).on(`click`, function(){
+        $(`.menu-program a`).removeClass(`activo`);
+
+        $(this).addClass(`activo`);
+        $(`.ocultar`).hide();
+        let enlace = $(this).attr(`href`);
+        console.log(enlace);
+        $(enlace).fadeIn(1000);
+
+        return false;
+    });
+
+    //Letterin.js
+
+    $(`.titulo-sitio`).lettering();
+
+    //Animaciones de numeros
+
+    $(`.resumen-evento li:nth-child(1) p.numero`).animateNumber({ number:6 }, 1200);
+    $(`.resumen-evento li:nth-child(2) p.numero`).animateNumber({ number:15 }, 1200);
+    $(`.resumen-evento li:nth-child(3) p.numero`).animateNumber({ number:3 }, 1200);
+    $(`.resumen-evento li:nth-child(4) p.numero`).animateNumber({ number:20 }, 1200);
+
+    //Countdown para dias
+
+    $(`#dias`).countdown("2020/10/20", function(event){
+        $(this).text(
+            event.strftime(`%D`)
+        );
+    } );
+    $(`#horas`).countdown("2020/10/20", function(event){
+        $(this).text(
+            event.strftime(`%H`)
+        );
+    } );
+    $(`#minutos`).countdown("2020/10/20", function(event){
+        $(this).text(
+            event.strftime(`%M`)
+        );
+    } );
+    $(`#segundos`).countdown("2020/10/20", function(event){
+        $(this).text(
+            event.strftime(`%S`)
+        );
+    } );
+    
+
+    
+
+
+});

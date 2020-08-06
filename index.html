@@ -91,13 +91,13 @@
             <div class="contenedor">
                 <div class="programa-evento">
                     <h2>PROGRAMA DE EVENTO</h2>
-                    <nav class=" menu-program ">
+                    <nav class="menu-program">
                         <a href="#talleres "><i class="fa fa-code "></i>Talleres</a>
                         <a href="#conference "><i class="fa fa-comment "></i>Conferencias</a>
                         <a href="#seminario "><i class="fa fa-university "></i>Seminarios</a>
                     </nav>
 
-                    <div id="talleres " class="info-taller ocultar ">
+                    <div id="talleres" class="info-taller ocultar ">
                         <div class="detalle-evento">
                             <h2>HTML5, CSS y JS</h2>
                             <p><i class="fa fa-clock "></i>16:00 hrs</p>
@@ -110,13 +110,37 @@
                             <p><i class="fa fa-calendar "></i>20-junio-2021</p>
                             <p><i class="fa fa-user "></i>Prof. Leo Darin</p>
                         </div>
+                        <a href="#" class="btn btn-info float-right clearfix "> ver todos</a>
+                    </div>
+                    <div id="conference" class="info-taller ocultar ">
+                        <div class="detalle-evento">
+                            <h2>Como ser Freelancer</h2>
+                            <p><i class="fa fa-clock "></i>10:00 hrs</p>
+                            <p><i class="fa fa-calendar "></i>20-enero-2021</p>
+                            <p><i class="fa fa-user "></i>Prof. Marco Samian</p>
+                        </div>
+                        <div class="detalle-evento">
+                            <h2>Tecnologias del futuro</h2>
+                            <p><i class="fa fa-clock "></i>12:00 hrs</p>
+                            <p><i class="fa fa-calendar "></i>20-junio-2021</p>
+                            <p><i class="fa fa-user "></i>Prof. Leo Darin</p>
+                        </div>
                         <a href="# " class="btn btn-info float-right clearfix "> ver todos</a>
                     </div>
-                    <div id="conference " class="info-conference ocultar ">
-
-                    </div>
-                    <div id="seminary " class="info-seminary ocultar ">
-
+                    <div id="seminario" class="info-taller ocultar ">
+                        <div class="detalle-evento">
+                            <h2>UI/UX interfaces</h2>
+                            <p><i class="fa fa-clock "></i>17:00 hrs</p>
+                            <p><i class="fa fa-calendar "></i>20-enero-2021</p>
+                            <p><i class="fa fa-user "></i>Prof. Leo Darin</p>
+                        </div>
+                        <div class="detalle-evento ">
+                            <h2>Aprende a programar en una mañana</h2>
+                            <p><i class="fa fa-clock "></i>09:00 hrs</p>
+                            <p><i class="fa fa-calendar "></i>20-junio-2021</p>
+                            <p><i class="fa fa-user "></i>Prof. Leo Darin</p>
+                        </div>
+                        <a href="# " class="btn btn-info float-right clearfix "> ver todos</a>
                     </div>
                 </div>
             </div>
@@ -169,19 +193,19 @@
         <div class="contenedor">
             <ul class="resumen-evento clearfix">
                 <li>
-                    <p class="numero"> 6</p>
+                    <p class="numero"> </p>
                     <p>Invitados</p>
                 </li>
                 <li>
-                    <p class="numero"> 8</p>
+                    <p class="numero"> </p>
                     <p>Talleres</p>
                 </li>
                 <li>
-                    <p class="numero"> 3</p>
+                    <p class="numero"> </p>
                     <p>Dias</p>
                 </li>
                 <li>
-                    <p class="numero"> 10</p>
+                    <p class="numero"> </p>
                     <p>Conferencias</p>
                 </li>
             </ul>
@@ -282,19 +306,19 @@
         <div class="cuenta-regresiva contenedor">
             <ul class="clearfix">
                 <li>
-                    <p class="numero">80</p>
+                    <p id="dias" class="numero"></p>
                     <p>DIAS</p>
                 </li>
                 <li>
-                    <p class="numero">15</p>
+                    <p id="horas" class="numero"></p>
                     <p>HORAS</p>
                 </li>
                 <li>
-                    <p class="numero">5</p>
+                    <p id="minutos" class="numero"></p>
                     <p>MINUtOS</p>
                 </li>
                 <li>
-                    <p class="numero">30</p>
+                    <p id="segundos" class="numero"></p>
                     <p>SEGUNDOS</p>
                 </li>
             </ul>
@@ -328,8 +352,13 @@
     </footer>
     <!--JavaScript-->
     <script src="js/vendor/modernizr-3.11.2.min.js "></script>
-    <script src="js/plugins.js "></script>
+   
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/plugins.js "></script>
+    <script src="js/jquery.animateNumber.min.js "></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.lettering.js"></script>
     <script src="js/main.js "></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->

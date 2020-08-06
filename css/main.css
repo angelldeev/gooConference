@@ -1,4 +1,4 @@
-/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+    /*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
 
 
 /* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
@@ -314,6 +314,56 @@ ul {
     }
 }
 
+/* Lettering */
+
+.titulo-sitio span {
+    position: relative;
+    text-shadow: 0 0 30px black;
+    transition: 0.5s;
+}
+@media (min-width: 768px){
+    .char1:hover{
+        top: 5px;
+    }
+    .char2:hover{
+        top: -4px;
+    }
+    .char3:hover{
+        top: 5px;
+    }
+    .char4:hover{
+        top: -4px;
+    }
+    .char5:hover{
+        top: 6px;
+    }
+    .char6:hover{
+        top: -4px;
+    }
+    .char7:hover{
+        top: 5px;
+    }
+    .char8:hover{
+        top: -4px;
+    }
+    .char9:hover{
+        top: 4px;
+    }
+    .char10:hover{
+        top: -2px;
+    }
+    .char11:hover{
+        top: 6px;
+    }
+    .char12:hover{
+        top: -2px;
+    }
+    .char13:hover{
+        top: 5px;
+    }
+
+}
+
 
 /*NavBAr class */
 
@@ -514,6 +564,23 @@ p {
     color: black;
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    position: relative;
+}
+
+.menu-program a.activo::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 20px;
+    width: 30px;
+    background-image: url(../img/talleres-flecha.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    bottom: -18px;
+
 }
 
 @media (min-width: 768px) {
