@@ -379,6 +379,14 @@ ul {
     justify-content: space-around;
 }
 
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
 .contenido-nav .nav-primary {
     display: none;
 }
@@ -1164,6 +1172,18 @@ h4 {
     background-color: whitesmoke;
     font-size: 1.8rem;
     margin-bottom: 1rem;
+}
+
+/** ===== conferencia ===========*/
+
+.galeria a {
+    display: inline-block;
+    margin-bottom: 5px ;
+}
+
+.nav-primary .activo  {
+    background-color: orangered !important;
+    color: white !important;
 }
 
 

@@ -176,6 +176,32 @@ $(function() {
 
     $(`.titulo-sitio`).lettering();
 
+    // Menu fijo
+
+    let windowHeight = $(window).height();
+    let barraAltura = $(`.nav-1`).innerHeight();
+
+    console.log(barraAltura);
+
+    $(window).scroll(function(){
+        let scroll = $(window).scrollTop();
+
+        if (scroll > windowHeight) {
+            $(`.nav-1`).addClass(`fixed`);
+            $(`body`).css({"margin-top" : barraAltura+"px"});
+        } else {
+            $(`.nav-1`).removeClass(`fixed`);
+            $(`body`).css({"margin-top" : "0px"});
+
+        }
+    });
+
+    //Menu Responsive, Phones.
+
+    $(`.menu-mov`).on(`click` , function(){
+        $(`.nav-primary`).slideToggle();
+    });
+
     //Animaciones de numeros
 
     $(`.resumen-evento li:nth-child(1) p.numero`).animateNumber({ number:6 }, 1200);
