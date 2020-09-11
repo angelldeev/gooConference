@@ -1,79 +1,8 @@
-<!doctype html>
-<html class="no-js" lang="">
-
-<head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta property="og:title" content="">
-    <meta property="og:type" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content="">
-
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="apple-touch-icon" href="icon.png">
-    <!-- Place favicon.ico in the root directory -->
-
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/all.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-    <meta name="theme-color" content="#fafafa">
-</head>
-
-<body>
-
-    <!-- Add your site or application content here -->
-    <header class="site-header">
-        <div class="hero">
-            <div class="contenido-header contenedor">
-                <nav class="redes-sociales">
-                    <a href="#"><i class="iconbtn fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="iconbtn fab fa-twitter"></i></a>
-                    <a href="#"><i class="iconbtn fab fa-instagram"></i></a>
-                    <a href="#"><i class="iconbtn fab fa-linkedin-in"></i></a>
-                </nav>
-                <div class="info-event">
-                    <div class="datos">
-                        <p class="fecha"><i class="far fa-calendar-alt"></i>10/12/12</p>
-                        <p class="lugar"><i class="fas fa-map-marked-alt"></i>Ciudad Guatemala</p>
-                    </div>
-
-                    <h1 class="titulo-sitio">gooConference</h1>
-                    <p class="slogan">Las mejores conferencias en <span>Guatemala</span></p>
-                </div>
-
-            </div>
-        </div>
-    </header>
-
-    <div class="nav-1">
-        <div class="contenido-nav contenedor">
-            <div class="logo">
-                <img src="img/logo.svg" alt="logo.l">
-            </div>
-            <div class="menu-mov">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="nav-primary">
-                <a class="btn btn-nav" href="#">Conferencias</a>
-                <a class="btn btn-nav" href="#">Calendarios</a>
-                <a class="btn btn-nav" href="#">Invitados</a>
-                <a class="btn btn-nav" href="#">Reservaciones</a>
-            </nav>
-        </div>
-    </div>
-
+<?php include_once "include/templates/header.php"; ?>
 
     <section class="section contenedor">
         <h2>REGISTRO DE USUARIOS</h2>
-        <form action="index.html" id="registro" class="registro" method="POST">
+        <form action="validar_registro.php" id="registro" class="registro" method="POST">
             <div id="datos-usuario" class="registro caja clearfix">
                 <div class="campo">
                     <label for="nombre">Nombre</label>
@@ -98,9 +27,9 @@
                                 <h2>Pase por dia</h2>
                                 <p class="numero">Q180</p>
                                 <ul>
-                                    <li>Bocadillos Gratis</li>
-                                    <li>Acceso a las conferencias</li>
-                                    <li>Todos los talleres</li>
+                                    <i class="fas fa-check"></i><li>Bocadillos Gratis</li>
+                                    <i class="fas fa-check"></i><li>Acceso a las conferencias</li>
+                                    <i class="fas fa-check"></i><li>Todos los talleres</li>
                                 </ul>
                                 <div class="orden">
                                     <label for="pase_dia">Boletos deseados</label>
@@ -113,9 +42,9 @@
                                 <h2>Toda la semana</h2>
                                 <p class="numero">Q260</p>
                                 <ul>
-                                    <li>Bocadillos Gratis</li>
-                                    <li>Acceso a las conferencias</li>
-                                    <li>Todos los talleres</li>
+                                    <i class="fas fa-check"></i><li>Bocadillos Gratis</li>
+                                    <i class="fas fa-check"></i><li>Acceso a las conferencias</li>
+                                    <i class="fas fa-check"></i><li>Todos los talleres</li>
                                 </ul>
                                 <div class="orden">
                                     <label for="pase_semana">Boletos deseados</label>
@@ -128,9 +57,9 @@
                                 <h2>Pase 3 dias</h2>
                                 <p class="numero">Q220</p>
                                 <ul>
-                                    <li>Bocadillos Gratis</li>
-                                    <li>Acceso a las conferencias</li>
-                                    <li>Todos los talleres</li>
+                                    <i class="fas fa-check"></i><li>Bocadillos Gratis</li>
+                                    <i class="fas fa-check"></i><li>Acceso a las conferencias</li>
+                                    <i class="fas fa-check"></i><li>Todos los talleres</li>
                                 </ul>
                                 <div class="orden">
                                     <label for="pase_3d">Boletos deseados</label>
@@ -291,51 +220,4 @@
 
         </form>
     </section>
-
-
-    <footer class="site-footer">
-        <div class="contenedor grid">
-            <div class="footer-info">
-                <h2>SOBRE <span>NOSOTROS</span></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias possimus iusto voluptas impedit doloribus odit, eum, molestiae repellendus modi atque deleniti? Libero praesentium voluptas quae, accusantium repellendus quasi ut a!</p>
-            </div>
-            <div class="last-tweets">
-                <h2>ULTIMOS <span>TWEETS</span></h2>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum nemo totam nam quae </li>
-                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum nemo totam nam quae </li>
-                    <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum nemo totam nam quae </li>
-                </ul>
-            </div>
-            <div class="menu">
-                <h2>NUESTRAS <span>REDES SOCIALES</span></h2>
-                <nav class="redes-sociales">
-                    <a href="#"><i class="iconbtn fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="iconbtn fab fa-twitter"></i></a>
-                    <a href="#"><i class="iconbtn fab fa-instagram"></i></a>
-                    <a href="#"><i class="iconbtn fab fa-linkedin-in"></i></a>
-                </nav>
-            </div>
-        </div>
-    </footer>
-    <!--JavaScript-->
-    <script src="js/vendor/modernizr-3.11.2.min.js "></script>
-    <script src="js/plugins.js "></script>
-    <script src="js/main.js "></script>
-
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-    <script>
-        window.ga = function() {
-            ga.q.push(arguments)
-        };
-        ga.q = [];
-        ga.l = +new Date;
-        ga('create', 'UA-XXXXX-Y', 'auto');
-        ga('set', 'anonymizeIp', true);
-        ga('set', 'transport', 'beacon');
-        ga('send', 'pageview')
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js " async></script>
-</body>
-
-</html>
+<?php include_once "include/templates/footer.php"; ?>

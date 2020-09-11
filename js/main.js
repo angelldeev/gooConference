@@ -1,21 +1,10 @@
-(function() {
+(function () {
     "use strict"
 
 
     let regalo = document.getElementById('regalo');
 
-    document.addEventListener('DOMContentLoaded', function() {
-        //console.log('Listo')
-        var map = L.map('map').setView([14.624448, -90.50271], 13);
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-L.marker([14.624448, -90.50271]).addTo(map)
-    .bindPopup('gooConference.<br> ven por tus reservaciones.')
-    .openPopup();
-
+    document.addEventListener('DOMContentLoaded', function () { // console.log('Listo')
         // Campos datos
 
         let nombre = document.getElementById('nombre');
@@ -35,23 +24,23 @@ L.marker([14.624448, -90.50271]).addTo(map)
         let botonRegistro = document.getElementById('btn-registro');
         let product_list = document.getElementById('lista-productos')
 
-        // Extras 
+        // Extras
 
         let camisas = document.getElementById('camisa_evento');
         let etiquetas = document.getElementById('etiqueta_evento');
         let total = document.getElementById('suma-total');
 
         calcular.addEventListener('click', calcularTotal);
-        pase_dia.addEventListener('blur', mostrarOP);
-        pase_2d.addEventListener('blur', mostrarOP);
-        pase_semana.addEventListener('blur', mostrarOP);
+        pase_dia.addEventListener('input', mostrarOP);
+        pase_2d.addEventListener('input', mostrarOP);
+        pase_semana.addEventListener('input', mostrarOP);
 
         nombre.addEventListener('blur', validarCampos);
         apellido.addEventListener('blur', validarCampos);
         email.addEventListener('blur', validarCampos);
         email.addEventListener('blur', validarCorreo);
 
-        function validarCorreo(event) {
+        function validarCorreo() {
             if (this.value.indexOf("@") < -1) {
                 errorDiv.style.display = `none`;
                 this.style.border = `none`;
@@ -63,7 +52,7 @@ L.marker([14.624448, -90.50271]).addTo(map)
             }
         }
 
-        function validarCampos(event) {
+        function validarCampos() {
             if (this.value == '') {
                 errorDiv.style.display = 'block';
                 errorDiv.innerHTML = `Este campo es obligatorio`;
@@ -77,7 +66,7 @@ L.marker([14.624448, -90.50271]).addTo(map)
 
         function calcularTotal(event) {
             event.preventDefault();
-            //console.log('Has hecho click');
+            console.log('Has hecho click');
             if (regalo.value === '') {
                 alert('Debes elegir un regalo');
                 regalo.focus();
@@ -107,7 +96,6 @@ L.marker([14.624448, -90.50271]).addTo(map)
                 if (cantEtiquetas >= 1) {
                     listadoProduc.push(`${cantEtiquetas} etiquetas`);
                 }
-
 
 
                 product_list.innerHTML = '';
@@ -146,21 +134,16 @@ L.marker([14.624448, -90.50271]).addTo(map)
         }
 
     }); // DOM CONTENT LOADED
-})();
 
 
 
-
-
-$(function() {
-
-    // programa de conferencias
+$(function () { // programa de conferencias
     $(`div.ocultar`).hide();
     $(`.programa-evento .info-taller:first`).show();
 
     $(`.menu-program a:first`).addClass(`activo`);
 
-    $(`.menu-program a`).on(`click`, function(){
+    $(`.menu-program a`).on(`click`, function () {
         $(`.menu-program a`).removeClass(`activo`);
 
         $(this).addClass(`activo`);
@@ -172,9 +155,18 @@ $(function() {
         return false;
     });
 
-    //Letterin.js
+    // Letterin.js
 
     $(`.titulo-sitio`).lettering();
+
+    // RESALTADO DE CLASES
+
+    $('body.conferencias .nav-primary a:contains("Conferencias")').addClass('activo');
+    $('body.calendario .nav-primary a:contains("Calendarios")').addClass('activo');
+    $('body.invitados .nav-primary a:contains("Invitados")').addClass('activo');
+    $('body.registro .nav-primary a:contains("Reservaciones")').addClass('activo');
+
+
 
     // Menu fijo
 
@@ -183,57 +175,76 @@ $(function() {
 
     console.log(barraAltura);
 
-    $(window).scroll(function(){
+    $(window).scroll(function () {
         let scroll = $(window).scrollTop();
 
         if (scroll > windowHeight) {
             $(`.nav-1`).addClass(`fixed`);
-            $(`body`).css({"margin-top" : barraAltura+"px"});
+            $(`body`).css({
+                "margin-top": barraAltura + "px"
+            });
         } else {
             $(`.nav-1`).removeClass(`fixed`);
-            $(`body`).css({"margin-top" : "0px"});
+            $(`body`).css({"margin-top": "0px"});
 
         }
     });
 
-    //Menu Responsive, Phones.
+    // mapa
+    if (document.getElementById('map')) {
+        var map = L.map('map').setView([ 20.674739, -103.387566 ], 16);
 
-    $(`.menu-mov`).on(`click` , function(){
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        L.marker([ 20.674739, -103.387566 ]).addTo(map).bindPopup('gooConference.<br> ven por tus reservaciones.').openPopup();
+        // .bindTooltip('GDLWebCamp 2018, Boletos ya disponibles')
+        // .openTooltip();
+    }
+  
+    // Menu Responsive, Phones.
+
+    $(`.menu-mov`).on(`click`, function () {
         $(`.nav-primary`).slideToggle();
     });
 
-    //Animaciones de numeros
+    // Animaciones de numeros
 
-    $(`.resumen-evento li:nth-child(1) p.numero`).animateNumber({ number:6 }, 1200);
-    $(`.resumen-evento li:nth-child(2) p.numero`).animateNumber({ number:15 }, 1200);
-    $(`.resumen-evento li:nth-child(3) p.numero`).animateNumber({ number:3 }, 1200);
-    $(`.resumen-evento li:nth-child(4) p.numero`).animateNumber({ number:20 }, 1200);
+    $(`.resumen-evento li:nth-child(1) p.numero`).animateNumber({
+        number: 6
+    }, 1200);
+    $(`.resumen-evento li:nth-child(2) p.numero`).animateNumber({
+        number: 15
+    }, 1200);
+    $(`.resumen-evento li:nth-child(3) p.numero`).animateNumber({
+        number: 3
+    }, 1200);
+    $(`.resumen-evento li:nth-child(4) p.numero`).animateNumber({
+        number: 20
+    }, 1200);
 
-    //Countdown para dias
+    // Countdown para dias
 
-    $(`#dias`).countdown("2020/10/20", function(event){
-        $(this).text(
-            event.strftime(`%D`)
-        );
-    } );
-    $(`#horas`).countdown("2020/10/20", function(event){
-        $(this).text(
-            event.strftime(`%H`)
-        );
-    } );
-    $(`#minutos`).countdown("2020/10/20", function(event){
-        $(this).text(
-            event.strftime(`%M`)
-        );
-    } );
-    $(`#segundos`).countdown("2020/10/20", function(event){
-        $(this).text(
-            event.strftime(`%S`)
-        );
-    } );
-    
+    $(`#dias`).countdown("2020/10/20", function (event) {
+        $(this).text(event.strftime(`%D`));
+    });
+    $(`#horas`).countdown("2020/10/20", function (event) {
+        $(this).text(event.strftime(`%H`));
+    });
+    $(`#minutos`).countdown("2020/10/20", function (event) {
+        $(this).text(event.strftime(`%M`));
+    });
+    $(`#segundos`).countdown("2020/10/20", function (event) {
+        $(this).text(event.strftime(`%S`));
+    });
 
-    
+    //PLUGIN COLORBOX 
 
+    $('.invitado-info').colorbox({ inline:true, width:"80%", height:"60%"});
 
 });
+
+
+
+
+
+})();

@@ -208,7 +208,7 @@ ul {
     justify-content: center;
 }
 
-.redes-sociales .iconbtn {
+.redes-sociales a{
     margin-top: 2rem;
     width: 4rem;
     height: 4rem;
@@ -219,27 +219,34 @@ ul {
 }
 
 @media (min-width: 768px) {
-    .redes-sociales .iconbtn {
+    .redes-sociales a {
+        background-color: white;
         border: 0.4rem solid white;
         color: #0e123f;
         width: 6rem;
         height: 6rem;
         font-size: 3rem;
-        margin-right: 2rem;
+        margin-right: 3rem;
         /*transform: translate(-50%, -50%);*/
         line-height: 3rem;
         position: relative;
         border-radius: 50%;
     }
+
+    .redes-sociales .iconbtn {
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+        transition: 0.4s;
+    }
     .redes-sociales .iconbtn::before {
         position: absolute;
         z-index: 1;
-        left: 50%;
+        left: 60%;
         top: 50%;
         transform: translate(-50%, -50%);
     }
     .redes-sociales .iconbtn::after {
-        background: white;
+        background-color: white;
         content: '';
         position: absolute;
         left: 0;
@@ -258,9 +265,14 @@ ul {
     .redes-sociales .iconbtn:hover {
         color: white;
     }
+
+    .redes-sociales a:hover {
+        background-color: transparent;
+    }
+
 }
 
-.redes-sociales a:last-child {
+.redes-sociales .iconbtn:last-child {
     margin-right: 0;
 }
 
@@ -611,6 +623,10 @@ p {
     border-bottom: 0.1rem solid black;
 }
 
+.menu-program .activo {
+    display: block;
+}
+
 .detalle-evento i {
     color: tomato;
     margin-right: 1rem;
@@ -765,24 +781,22 @@ p {
     gap: 2.5rem;
 }
 
-.tabla-precios ul li::before {
-    font-family: 'FontAwesome';
-    display: inline-block;
+.tabla-precios .fa-check{
+    display: inline;
     vertical-align: top;
     padding: 0 0.5rem;
-    font-size: 2rem;
+    font-size: 4rem;
     color: green;
     -webkit-font-smoothing: antialiased;
-    content: "\f00c";
 }
 
-.list-precios~li {
+.list-precios li {
     padding: 1rem;
 }
 
 .tabla-precios {
     width: auto;
-    height: 35rem;
+    height: 60rem;
     text-align: center;
     border: solid orangered 0.5px;
     background-color: white;
@@ -1067,9 +1081,6 @@ h4 {
     color: red;
 }
 
-.paquetes .tabla-precios {
-    height: 40rem;
-}
 
 .paquetes .tabla-precios:hover {
     transform: none;
@@ -1186,6 +1197,42 @@ h4 {
     color: white !important;
 }
 
+/*====== CALENDARIO ============*/
+
+.calendario-style {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+}
+
+.calendar-obj .dia {
+    background-color: white;
+    border: 2px solid tomato;
+    transition: 0.5s;
+}
+
+.calendar-obj .dia h3 {
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    background-color: tomato;
+    font-size: 2.5rem;
+}
+.calendar-obj .dia:hover {
+    background-color: #e1e1e1;
+}
+
+.dia p {
+    text-align: center;
+}
+
+/* ======================================
+    COLORBOX INVITADOS
+    ===================================== */
+
+.cboxElement {
+    padding: 30px !important;
+    text-align: center;
+}        
 
 /* ==========================================================================
    Helper classes
