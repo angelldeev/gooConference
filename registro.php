@@ -2,7 +2,7 @@
 
     <section class="section contenedor">
         <h2>REGISTRO DE USUARIOS</h2>
-        <form action="validar_registro.php" id="registro" class="registro" method="POST">
+        <form action="validar_registro.php" id="registro" class="registro" method="post">
             <div id="datos-usuario" class="registro caja clearfix">
                 <div class="campo">
                     <label for="nombre">Nombre</label>
@@ -33,7 +33,7 @@
                                 </ul>
                                 <div class="orden">
                                     <label for="pase_dia">Boletos deseados</label>
-                                    <input type="number" min="0" id="pase_dia" size="3" placeholder="0">
+                                    <input type="number" min="0" id="pase_dia" size="3" name="boletos[]" placeholder="0">
                                 </div>
                             </div>
                         </li>
@@ -48,7 +48,7 @@
                                 </ul>
                                 <div class="orden">
                                     <label for="pase_semana">Boletos deseados</label>
-                                    <input type="number" min="0" id="pase_semana" size="3" placeholder="0">
+                                    <input type="number" min="0" id="pase_semana" size="3" name="boletos[]" placeholder="0">
                                 </div>
                             </div>
                         </li>
@@ -63,7 +63,7 @@
                                 </ul>
                                 <div class="orden">
                                     <label for="pase_3d">Boletos deseados</label>
-                                    <input type="number" min="0" id="pase_2d" size="3" placeholder="0">
+                                    <input type="number" min="0" id="pase_2d" size="3" name="boletos[]" placeholder="0">
                                 </div>
                             </div>
                         </li>
@@ -183,19 +183,19 @@
                     <div class="extras">
                         <div class="orden">
                             <label for="camisa_evento"> Camisa del evento $10</label>
-                            <input type="number" min="0" id="camisa_evento" placeholder="0">
+                            <input type="number" min="0" id="camisa_evento" name="pedido_camisas" placeholder="0">
                         </div>
                         <div class="orden">
                             <label for="etiqueta_evento"> Etiquetas de evento $2</label>
-                            <input type="number" min="0" id="etiqueta_evento" placeholder="0">
+                            <input type="number" min="0" id="etiqueta_evento" name="pedido_etiquetas" placeholder="0">
                         </div>
                         <div class="orden">
-                            <label for="regalos"> Selecciona regalo</label>
-                            <select name="" id="regalo" required>
+                            <label for="regalo"> Selecciona regalo</label>
+                            <select name="regalo" id="regalo" required>
                                 <option value=""> Seleccione un regalo</option>
-                                <option value="ETI"> Etiquetas</option>
-                                <option value="PUL"> Pulseras</option>
-                                <option value="PLU"> Plumas</option>
+                                <option value="2"> Etiquetas</option>
+                                <option value="1"> Pulseras</option>
+                                <option value="3"> Plumas</option>
                             </select>
                         </div>
                         <!--Orden-->
@@ -212,7 +212,8 @@
                         <div id="suma-total">
 
                         </div>
-                        <input id="btn-registro" class="btn btn-registro" type="submit" value="pagar">
+                        <input type="hidden" name="total_pedido" id="total_pedido">
+                        <input id="btn-registro" class="btn btn-registro" name="submit" type="submit" value="pagar">
                     </div>
                 </div>
 

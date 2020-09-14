@@ -30,6 +30,8 @@
         let etiquetas = document.getElementById('etiqueta_evento');
         let total = document.getElementById('suma-total');
 
+        botonRegistro.disabled = true;
+
         calcular.addEventListener('click', calcularTotal);
         pase_dia.addEventListener('input', mostrarOP);
         pase_2d.addEventListener('input', mostrarOP);
@@ -105,6 +107,9 @@
 
                 }
                 total.innerHTML = "$" + totalPago.toFixed(2);
+
+                botonRegistro.disabled = false;
+                document.getElementById('total_pedido').value = totalPago;
             }
         }
 
