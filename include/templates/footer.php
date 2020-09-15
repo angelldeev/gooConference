@@ -49,6 +49,10 @@
         ga('send', 'pageview')
     </script>
     <script src="https://www.google-analytics.com/analytics.js " async></script>
+
+
+    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/0b7c00364cd8f09b90f4bfa55/d408fe42a136dbbaee3a530db.js");</script>
+    
 </body>
 
 </html>
