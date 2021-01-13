@@ -244,5 +244,6 @@
             </ul>
         </div>
     </section>
+    <? phpinfo();?>
     <?php include_once "include/templates/footer.php"; ?>
    
